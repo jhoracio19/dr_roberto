@@ -1,3 +1,4 @@
+// 
 // Función para crear la sección de detalles
 function createDetailsSection(item) {
     const details = document.createElement("div");
@@ -13,29 +14,41 @@ function createDetailsSection(item) {
     definitionParagraph.textContent = definition;
     details.appendChild(definitionParagraph);
 
-    // Agrega los medios (imágenes o videos)
-    if (mediaType === "image") {
-        const images = src.split(",");
-        images.forEach(imageSrc => {
-            const img = document.createElement("img");
-            img.src = imageSrc.trim();
-            img.alt = definition;
-            img.loading = "lazy"; // Lazy loading para mejorar rendimiento
-            details.appendChild(img);
-        });
-    } else if (mediaType === "video") {
-        // Contenedor para hacer el video responsivo
+    // Procesar los archivos
+    const sources = src.split(",").map(s => s.trim());
+
+    if (mediaType === "video" && sources.length > 0) {
+        // El primer elemento será el video
+        const videoSrc = sources[0];
+        
         const videoWrapper = document.createElement("div");
         videoWrapper.classList.add("video-container");
 
-        const iframe = document.createElement("iframe");
-        iframe.src = src;
-        iframe.frameBorder = "0";
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-        iframe.allowFullscreen = true;
+        const video = document.createElement("video");
+        video.controls = true;
+        video.src = videoSrc;
+        videoWrapper.appendChild(video);
 
-        videoWrapper.appendChild(iframe);
         details.appendChild(videoWrapper);
+
+        // Si hay imágenes después del video, agregarlas
+        const images = sources.slice(1);
+        images.forEach(imageSrc => {
+            const img = document.createElement("img");
+            img.src = imageSrc;
+            img.alt = definition;
+            img.loading = "lazy";
+            details.appendChild(img);
+        });
+    } else {
+        // Si no es video, asumir que son solo imágenes
+        sources.forEach(imageSrc => {
+            const img = document.createElement("img");
+            img.src = imageSrc;
+            img.alt = definition;
+            img.loading = "lazy";
+            details.appendChild(img);
+        });
     }
 
     return details;
