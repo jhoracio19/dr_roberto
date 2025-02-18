@@ -548,6 +548,7 @@ ul {
 @media (max-width: 768px) {
     .testimonios {
         padding: 1.5rem;
+        text-align: center;
     }
 
     .testimonio-video {
@@ -564,6 +565,7 @@ ul {
 @media (max-width: 480px) {
     .testimonios {
         padding: 1rem;
+        text-align: center;
     }
 
     .testimonio-video {
