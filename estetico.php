@@ -31,7 +31,7 @@ incluirTemplate('header', $inicio = true);
         <li
         data-definition="Cirugía de los párpados para eliminar el exceso de piel y bolsas debajo de los ojos."
         data-type="image"
-        data-src="src/cirugias/images.jpeg">Blefaroplastia</li>
+        data-src="src/cirugias/Blefaroplastia.jpeg">Blefaroplastia</li>
 
         <h2>Procedimientos No Quirúrgicos</h2>
 
