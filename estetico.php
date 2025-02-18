@@ -16,7 +16,7 @@ incluirTemplate('header', $inicio = true);
         <li
         data-definition="Cirugía para modificar la forma de la nariz por razones estéticas o funcionales."
         data-type="video"
-        data-src="src/cirugias/rinoplastia.mp4,src/pacientes/rino1.jpg,src/pacientes/rino2.jpg,src/pacientes/rino3.jpg,src/pacientes/rino4.jpg,src/pacientes/rino5.jpg,src/pacientes/rino6.jpg,src/pacientes/rino7.jpg,src/pacientes/rino8.jpg,src/pacientes/rino9.jpg,src/pacientes/rino10.jpg,src/pacientes/rino11.jpg,src/pacientes/rino12.jpg,src/pacientes/rino13.jpg">>Rinoplastia</li>
+        data-src="src/cirugias/rinoplastia.mp4,src/pacientes/rino1.jpg,src/pacientes/rino2.jpg,src/pacientes/rino3.jpg,src/pacientes/rino4.jpg,src/pacientes/rino5.jpg,src/pacientes/rino6.jpg,src/pacientes/rino7.jpg,src/pacientes/rino8.jpg,src/pacientes/rino9.jpg,src/pacientes/rino10.jpg,src/pacientes/rino11.jpg,src/pacientes/rino12.jpg,src/pacientes/rino13.jpg">Rinoplastia</li>
 
         <li
         data-definition="Cirugía para corregir la forma o posición de las orejas (por ejemplo, orejas prominentes)."
