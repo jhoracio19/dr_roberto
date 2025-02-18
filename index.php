@@ -74,7 +74,7 @@ incluirTemplate('header', true);
             </video>
         </div>
         <div class="testimonio-texto">
-            <p>Escucha directamente de nuestros pacientes cómo hemos impactado positivamente en su salud y bienestar. Aquí, [Nombre de la paciente] comparte su experiencia con nuestros servicios.</p>
+            <p>Escucha directamente de nuestros pacientes cómo hemos impactado positivamente en su salud y bienestar. Aquí, Paola comparte su experiencia con nuestros servicios.</p>
         </div>
     </section>
 
