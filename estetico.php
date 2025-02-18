@@ -19,13 +19,19 @@ incluirTemplate('header', $inicio = true);
         data-src="src/cirugias/rinoplastia.mp4">Rinoplastia</li>
 
         <li
-        data-definition="Cirugía para corregir la forma o posición de las orejas (por ejemplo, orejas prominentes).">Otoplastia</li>
+        data-definition="Cirugía para corregir la forma o posición de las orejas (por ejemplo, orejas prominentes)."
+        data-type="image"
+        data-src="src/cirugias/otoplastia.jpg">Otoplastia</li>
 
         <li
-        data-definition="Cirugía para aumentar o reducir el mentón, a veces combinada con rinoplastia para mejorar la armonía facial.">Mentoplastia</li>
+        data-definition="Cirugía para aumentar o reducir el mentón, a veces combinada con rinoplastia para mejorar la armonía facial."
+        data-type="image"
+        data-src="src/cirugias/Mentoplastia.jpg">Mentoplastia</li>
 
         <li
-        data-definition="Cirugía de los párpados para eliminar el exceso de piel y bolsas debajo de los ojos.">Blefaroplastia</li>
+        data-definition="Cirugía de los párpados para eliminar el exceso de piel y bolsas debajo de los ojos."
+        data-type="image"
+        data-src="src/cirugias/images.jpeg">Blefaroplastia</li>
 
         <h2>Procedimientos No Quirúrgicos</h2>
 
@@ -36,13 +42,19 @@ incluirTemplate('header', $inicio = true);
         data-src="src/cirugias/botox.jpg , src/cirugias/botox2.jpg" >Botox</li>
 
         <li
-        data-definition="Para mejorar el volumen de labios, pómulos, surcos nasogenianos o corregir asimetrías faciales.">Rellenos dérmicos (ácido hialurónico) </li>
+        data-definition="Para mejorar el volumen de labios, pómulos, surcos nasogenianos o corregir asimetrías faciales."
+        data-type="image"
+        data-src="src/cirugias/rellenos.jpg">Rellenos dérmicos (ácido hialurónico) </li>
 
         <li
-        data-definition="Para mejorar la flacidez facial sin cirugía.">Lifting con hilos tensores</li>
+        data-definition="Para mejorar la flacidez facial sin cirugía."
+        data-type="image"
+        data-src="src/cirugias/tensores.jpg">Lifting con hilos tensores</li>
 
         <li
-        data-definition="Para mejorar la calidad de la piel y promover la regeneración celular.">Plasma rico en plaquetas (PRP) </li>
+        data-definition="Para mejorar la calidad de la piel y promover la regeneración celular."
+        data-type="image"
+        data-src="src/cirugias/prp.jpeg">Plasma rico en plaquetas (PRP) </li>
 
         </ul>
         
