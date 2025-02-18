@@ -1,0 +1,956 @@
+/* -------------------------------------------------------------------------- */
+/*                                   ROOT                                   */
+/* -------------------------------------------------------------------------- */
+:root {
+    /* Fuentes */
+    --fuente-heading: 'Pt Sans', sans-serif;
+    --fuente-parrafos: 'Open Sans', sans-serif;
+
+    /* Colores Primarios */
+    --color-azul: #007BFF;
+    --color-azul-oscuro: #0056b3;
+    --color-blanco: #ffffff;
+
+    /* Colores Neutros */
+    --color-gris-claro: #e1e1e1;
+    --color-negro: #000000;
+    --color-gris-fondo: #f5f5f5; /* Usado para fondos muy claros, como el header */
+    --color-gris-medio: #ddd;     /* Usado para bordes y separadores sutiles */
+    --color-gris-f8: #f8f9fa;     /* Otro tono de gris claro para fondos */
+    --color-gris-f9: #f9f9f9;     /* Otro tono de gris claro para fondos diferentes */
+    --color-gris-f0: #f0f0f0;     /* Otro tono de gris claro para fondos diferentes */
+    --color-gris-f4: #f0f4f8;     /* Otro tono de gris claro para fondos diferentes */
+    --color-gris-e6: #e6f7ff;     /*  Gris muy claro con un toque azul */
+    --color-gris-cc: #ccf0ff;     /* Gris claro con un toque más azul para hovers */
+
+
+    /* Esquema de colores temático (puedes ajustar según la marca) */
+    --color-principal: var(--color-azul);
+    --color-principal-oscuro: var(--color-azul-oscuro);
+    --color-texto-principal: var(--color-negro);
+    --color-texto-secundario: #555; /* Gris más oscuro para párrafos */
+    --color-fondo-claro: var(--color-gris-f5);
+    --color-borde-claro: var(--color-gris-medio);
+
+    /* Espaciado y Tamaños */
+    --espaciado-pequeno: 0.5rem;   /* 8px */
+    --espaciado-normal: 1rem;    /* 16px */
+    --espaciado-mediano: 2rem;   /* 32px */
+    --espaciado-grande: 3rem;    /* 48px */
+    --radio-borde-botones: 0.3125rem; /* 5px - Radio de borde para botones */
+    --radio-borde-tarjetas: 0.75rem; /* 12px - Radio de borde para tarjetas */
+    --ancho-maximo-contenedor: 1200px; /* Ancho máximo para contenedores principales */
+
+    /* Sombras */
+    --sombra-caja-suave: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --sombra-caja-media: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --sombra-caja-fuerte:  0 8px 15px rgba(0, 0, 0, 0.3);
+    --sombra-caja-hover-contacto: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.20); /* Sombra específica para hover en contacto */
+
+    /* Transiciones */
+    --transicion-normal: background-color 0.3s, color 0.3s;
+    --transicion-transform: transform 0.3s ease;
+    --transicion-box-shadow: box-shadow 0.3s ease;
+    --transicion-todo: all 0.3s ease-in-out;
+
+    /* Otros */
+    --ancho-borde-normal: 1px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                ELEMENTOS BASE                              */
+/* -------------------------------------------------------------------------- */
+
+svg {
+    color: var(--color-blanco); /* Iconos SVG en blanco por defecto */
+}
+
+ul {
+    list-style-type: none; /* Elimina viñetas por defecto en listas ul */
+    padding: 0;
+    margin: 0; /* Resetea márgenes por defecto de ul */
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 UTILIDADES                                 */
+/* -------------------------------------------------------------------------- */
+.centrar {
+    text-align: center; /* Clase de utilidad para centrar texto */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  BOTONES                                  */
+/* -------------------------------------------------------------------------- */
+.btn {
+    display: inline-block; /* Permite que los botones estén en línea pero con propiedades de bloque */
+    text-decoration: none;
+    padding: var(--espaciado-pequeno) var(--espaciado-normal);
+    border: var(--ancho-borde-normal) solid var(--color-principal);
+    border-radius: var(--radio-borde-botones);
+    color: var(--color-principal);
+    font-weight: bold;
+    transition: var(--transicion-normal);
+    cursor: pointer; /* Indica que es interactivo */
+    background-color: transparent; /* Fondo transparente por defecto */
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border-color: var(--color-principal); /* Asegura que el borde también sea azul primario */
+}
+
+.btn:hover,
+.btn-primary:hover {
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-blanco);
+    border-color: var(--color-principal-oscuro); /* Cambia el borde en hover para consistencia */
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--espaciado-pequeno) var(--espaciado-mediano);
+    background-color: var(--color-gris-fondo);
+    border-bottom: var(--ancho-borde-normal) solid var(--color-borde-claro);
+}
+
+.header-logo img {
+    max-height: 50px;
+}
+
+.header-menu ul {
+    display: flex;
+}
+
+.header-menu li {
+    margin-left: var(--espaciado-normal); /* Espacio solo a la izquierda para separar los items */
+}
+.header-menu li:first-child {
+    margin-left: 0; /* Elimina margen izquierdo del primer elemento */
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    font-weight: bold;
+    transition: color 0.3s; /* Transición suave para el color del texto */
+}
+
+.header-menu a:hover {
+    color: var(--color-principal);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--espaciado-pequeno); /* Espaciado entre los elementos de acciones del header */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  SECCION HERO                              */
+/* -------------------------------------------------------------------------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--espaciado-mediano);
+    background-color: var(--color-gris-f8); /* Fondo suavemente más oscuro que el header */
+}
+
+.hero-content {
+    flex: 1; /* Ocupa el espacio disponible en el flex container */
+    text-align: left; /* Alineación del texto a la izquierda por defecto */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--espaciado-mediano);
+}
+
+.hero .btn {
+    padding: var(--espaciado-normal) var(--espaciado-mediano);
+    font-size: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 210px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--color-principal);
+    box-shadow: var(--sombra-caja-suave);
+}
+
+/* HERO ENFERMEDADES -  LISTADO */
+.hero-enfermedades {
+    padding: var(--espaciado-mediano);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-caja-suave);
+    margin: var(--espaciado-mediano) auto;
+    max-width: 800px;
+    border-radius: var(--radio-borde-tarjetas);
+}
+
+.hero-enfermedades h1 {
+    text-align: center;
+    color: var(--color-azul-oscuro);
+    margin-bottom: var(--espaciado-mediano);
+    font-size: 2em;
+}
+
+.hero-content_enfermedades ul > li {
+    background-color: var(--color-gris-e6);
+    border-left: 4px solid var(--color-azul-oscuro);
+    margin-bottom: var(--espaciado-pequeno);
+    padding: var(--espaciado-normal) var(--espaciado-mediano);
+    border-radius: var(--radio-borde-botones);
+    transition: background-color 0.3s ease;
+    cursor: pointer; /* Indica que los items son clickables */
+}
+
+.hero-content_enfermedades ul > li:hover {
+    background-color: var(--color-gris-cc);
+}
+
+.hero-content_enfermedades ul > li ul {
+    margin-top: var(--espaciado-pequeno);
+    padding-left: var(--espaciado-mediano);
+    list-style-type: disc; /* Restaura el estilo de lista de disco para sub-ítems */
+}
+
+.hero-content_enfermedades ul > li ul > li {
+    background: none;
+    border: none;
+    padding: calc(var(--espaciado-pequeno) / 2) 0; /* Reduce el padding vertical de sub-ítems */
+}
+
+.hero-content_enfermedades ul > li ul > li:hover {
+    background: none; /* Evita hover en sub-ítems */
+}
+
+
+/* DEFINICIONES Y DETALLES DENTRO DE HERO ENFERMEDADES */
+#definition-container {
+    background-color: var(--color-gris-f9);
+    border: var(--ancho-borde-normal) solid var(--color-gris-medio);
+    border-radius: var(--radio-borde-tarjetas);
+    padding: var(--espaciado-mediano);
+    max-width: 600px;
+    margin: var(--espaciado-mediano) auto;
+    box-shadow: var(--sombra-caja-suave);
+    font-family: var(--fuente-parrafos);
+    color: var(--color-texto-principal);
+}
+
+#definition-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--espaciado-pequeno);
+    color: var(--color-principal);
+    text-align: center;
+}
+
+#definition-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: var(--espaciado-mediano);
+    text-align: justify;
+}
+
+#media-container {
+    display: flex;
+    gap: var(--espaciado-pequeno);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#media-container img,
+#media-container video {
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--radio-borde-botones);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: calc(var(--espaciado-pequeno) / 2);
+    transition: var(--transicion-transform);
+}
+
+#media-container img:hover,
+#media-container video:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    margin-top: var(--espaciado-pequeno);
+    padding: var(--espaciado-normal);
+    border: var(--ancho-borde-normal) solid var(--color-gris-medio);
+    border-radius: 25px; /* Más redondeado */
+    background-color: var(--color-gris-f9);
+    display: none; /* Oculto por defecto */
+}
+
+.details img,
+.details video {
+    max-width: 100%;
+    margin-top: var(--espaciado-pequeno);
+}
+
+#gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaciado-mediano);
+    margin: var(--espaciado-mediano) 0;
+    padding: var(--espaciado-pequeno); /* Padding interno */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-gris-medio);
+    border-radius: var(--radio-borde-tarjetas);
+    max-width: 300px;
+    width: 100%;
+    flex: 1 1 calc(33.33% - var(--espaciado-mediano)); /* Ajuste en flex-basis para el gap */
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: var(--transicion-transform);
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.modal.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid var(--color-blanco);
+    border-radius: var(--radio-borde-botones);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 SECCION SERVICIOS                           */
+/* -------------------------------------------------------------------------- */
+.servicios {
+    padding: var(--espaciado-grande) var(--espaciado-mediano);
+    background-color: var(--color-gris-f4); /* Fondo muy claro para servicios */
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--espaciado-mediano);
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--espaciado-mediano);
+    max-width: var(--ancho-maximo-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espaciado-pequeno);
+}
+
+.service-card {
+    background-color: var(--color-blanco);
+    padding: var(--espaciado-mediano);
+    border-radius: var(--radio-borde-tarjetas);
+    box-shadow: var(--sombra-caja-media); /* Sombra un poco más pronunciada para destacar */
+    transition: var(--transicion-transform), var(--transicion-box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: var(--ancho-borde-normal) solid var(--color-gris-claro);
+    width: 250px;
+    height: 350px; /* Altura fija para consistencia visual */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: var(--sombra-caja-fuerte); /* Sombra más fuerte en hover */
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: var(--espaciado-pequeno);
+    border-radius: 50%;
+    transition: var(--transicion-transform);
+}
+
+.service-icon:hover {
+    transform: scale(1.1);
+}
+
+.service-title {
+    font-size: 1.6rem;
+    color: var(--color-texto-principal);
+    margin: var(--espaciado-pequeno) 0;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    padding: 0 var(--espaciado-pequeno);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                              SECCION ACERCA DE DOCTOR                       */
+/* -------------------------------------------------------------------------- */
+.about-doctor {
+    padding: var(--espaciado-grande) var(--espaciado-mediano);
+    background-color: var(--color-gris-f9); /* Fondo muy claro para "Acerca de" */
+    text-align: center;
+}
+
+.about-doctor h2 {
+    font-size: 2.5rem;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--espaciado-mediano);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaciado-mediano);
+    flex-wrap: wrap;
+    max-width: var(--ancho-maximo-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espaciado-pequeno);
+}
+
+.about-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: var(--radio-borde-tarjetas);
+    object-fit: cover;
+    transition: var(--transicion-transform);
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1 1 300px;
+    padding: var(--espaciado-mediano);
+    text-align: left;
+    font-family: Arial, sans-serif; /* o la fuente que prefieras para el texto */
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                           SECCION CONTACTO Y UBICACION                       */
+/* -------------------------------------------------------------------------- */
+.contact {
+    padding: var(--espaciado-grande) var(--espaciado-mediano);
+    background-color: var(--color-gris-f8); /* Fondo similar al Hero o Servicios para coherencia */
+    text-align: center;
+    overflow: hidden;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: var(--color-azul-oscuro);
+    margin-bottom: var(--espaciado-mediano);
+    font-weight: 600; /* Ligeramente más gruesa, como se define en variables root */
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espaciado-mediano);
+    max-width: var(--ancho-maximo-contenedor);
+    margin: 0 auto;
+    padding: 0 var(--espaciado-pequeno);
+}
+
+.contact-map {
+    height: 400px; /* Altura fija para el mapa */
+    border-radius: var(--radio-borde-tarjetas);
+    box-shadow: var(--sombra-caja-suave);
+    overflow: hidden;
+    transition: var(--transicion-transform), var(--transicion-box-shadow);
+}
+
+.contact-map:hover {
+    transform: scale(1.02);
+    box-shadow: var(--sombra-caja-hover-contacto);
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact-info {
+    padding: var(--espaciado-mediano);
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-borde-tarjetas);
+    box-shadow: var(--sombra-caja-suave);
+    transition: var(--transicion-transform), var(--transicion-box-shadow);
+}
+
+.contact-info:hover {
+    transform: scale(1.02);
+    box-shadow: var(--sombra-caja-hover-contacto);
+}
+
+.contact-info h3 {
+    color: var(--color-azul-oscuro);
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--espaciado-pequeno);
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: var(--color-azul-oscuro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: var(--color-principal-oscuro);
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: calc(var(--espaciado-pequeno) / 2) ; /* Espaciado reducido entre items de lista */
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-pequeno);
+}
+
+.contact-info i {
+    color: var(--color-texto-secundario); /* Iconos en gris secundario para suavizar */
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--espaciado-mediano);
+    background-color: #333; /* Color base del footer */
+    color: var(--color-blanco);
+    border-top: var(--ancho-borde-normal) solid #555; /* Borde superior más oscuro */
+}
+
+.footer-social {
+    display: flex;
+    gap: calc(var(--espaciado-pequeno) * 1.5); /* Espaciado ligeramente mayor entre iconos sociales */
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: var(--transicion-transform);
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-menu ul {
+    display: flex;
+}
+
+.footer-menu li {
+    margin-left: var(--espaciado-normal);
+}
+.footer-menu li:first-child {
+    margin-left: 0;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: var(--color-principal); /* Mismo color azul que en el header en hover */
+}
+
+.footer-contact p {
+    margin: calc(var(--espaciado-pequeno) / 2) 0; /* Reduce el margen vertical de párrafos de contacto */
+}
+
+.footer-contact a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                             */
+/* -------------------------------------------------------------------------- */
+/*  Resoluciones más comunes:
+    - Escritorio grande:  > 1200px (No definido en media queries, se usa el diseño base)
+    - Escritorio normal/Laptop: ~ 1024px
+    - Tablet: ~ 768px
+    - Móvil: ~ 480px o menos
+*/
+
+/* Tablet y Dispositivos Móviles Grandes (Máximo 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: var(--espaciado-normal);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem; /* Ajuste de padding en botones */
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en servicios para tablets */
+    }
+
+    .about-content {
+        flex-direction: column; /* Apila el contenido de "Acerca de" en tablets */
+        text-align: center; /* Centra texto en "Acerca de" en tablets */
+    }
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+/* Tablet y Móviles (Máximo 768px) */
+@media (max-width: 768px) {
+    /* HEADER */
+    .header-menu_link{
+        padding-bottom: 10px;
+    }
+    .btn-primary{
+        margin-top: 15px;
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-menu ul {
+        flex-direction: column;
+        gap: var(--espaciado-pequeno); /* Espaciado vertical entre items del menú */
+    }
+
+    .header-menu li {
+        margin-left: 0; /* Elimina margen horizontal en menú vertical */
+    }
+
+    .header-actions {
+        margin-top: var(--espaciado-pequeno); /* Margen superior para acciones en header vertical */
+        flex-direction: column; /* Apila los botones de acción en el header */
+        align-items: center; /* Centra los botones de acción */
+        gap: var(--espaciado-normal); /* Aumenta el espacio entre botones en vertical */
+    }
+
+
+    /* HERO */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero .btn {
+        font-size: 0.85rem;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 210px;
+    }
+
+    .hero-enfermedades {
+        padding: var(--espaciado-normal); /* Reduce el padding en hero enfermedades en tablet */
+    }
+
+    .hero-enfermedades h1 {
+        font-size: 1.8em; /* Reduce el tamaño del título en hero enfermedades en tablet */
+    }
+
+
+    /* SERVICIOS */
+    .services-container {
+        grid-template-columns: 1fr; /* Una columna en servicios para móviles */
+    }
+
+    .service-card {
+        padding: var(--espaciado-normal); /* Reduce padding en tarjetas de servicio en tablet */
+    }
+
+    .service-title {
+        font-size: 1.5rem; /* Reduce tamaño de títulos de servicio en tablet */
+    }
+
+    .service-description {
+        font-size: 0.9rem; /* Reduce tamaño de descripciones de servicio en tablet */
+    }
+
+    /* ACERCA DE DOCTOR */
+    .about-content {
+        padding: var(--espaciado-mediano); /* Ajusta padding en "Acerca de" en tablet */
+    }
+
+    .about-text {
+        font-size: 0.9rem; /* Reduce tamaño de texto en "Acerca de" en tablet */
+    }
+
+    /* CONTACTO */
+    .contact {
+        padding: var(--espaciado-mediano) var(--espaciado-pequeno); /* Reduce padding horizontal en contacto en tablet */
+    }
+
+    .contact h2 {
+        font-size: 2rem; /* Reduce tamaño de título de contacto en tablet */
+    }
+
+    .contact-info {
+        padding: var(--espaciado-normal); /* Reduce padding en info de contacto en tablet */
+    }
+
+
+    /* GALERIA DE IMAGENES (Dentro de Hero Enfermedades) */
+    .image-container {
+        flex: 1 1 calc(50% - var(--espaciado-mediano)); /* Dos imágenes por fila en tablet */
+    }
+
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        gap: var(--espaciado-pequeno); /* Espacio vertical en menú de footer en móvil */
+    }
+    .footer-menu li {
+        margin-left: 0; /* Elimina margen horizontal en footer menú vertical */
+    }
+
+    .footer-contact {
+        margin-top: var(--espaciado-pequeno); /* Margen superior en contacto de footer vertical */
+    }
+
+    .footer-social {
+        margin-bottom: var(--espaciado-pequeno); /* Margen inferior en social de footer vertical */
+        justify-content: center; /* Centra iconos sociales en footer vertical */
+    }
+}
+
+
+/* Móviles Pequeños (Máximo 480px) */
+@media (max-width: 480px) {
+
+    /* Header */
+    .header-menu_link{
+        padding-bottom: 30px;
+    }
+    .btn-primary{
+        margin-top: 15px;
+    }
+
+    /* HERO */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .hero .btn {
+        font-size: 0.8rem;
+        padding: calc(var(--espaciado-pequeno) / 2) var(--espaciado-normal); /* Aún menor padding en botones pequeños */
+    }
+
+    .hero-image img {
+        width: 120px;
+        height: 180px;
+    }
+
+    /* SERVICIOS */
+    .service-card {
+        padding: var(--espaciado-pequeno); /* Aún menos padding en tarjetas de servicio en móvil pequeño */
+    }
+
+    .service-title {
+        font-size: 1.3rem; /* Reduce aún más títulos de servicio en móvil pequeño */
+    }
+
+    .service-description {
+        font-size: 0.8rem; /* Reduce aún más descripciones de servicio en móvil pequeño */
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px; /* Iconos de servicio más pequeños en móvil pequeño */
+    }
+
+    /* ACERCA DE DOCTOR */
+    .about-content {
+        padding: var(--espaciado-pequeno); /* Ajusta padding en "Acerca de" en móvil pequeño */
+    }
+
+    .about-text p {
+        font-size: 0.8rem; /* Reduce tamaño de párrafo en "Acerca de" en móvil pequeño */
+    }
+
+    /* CONTACTO */
+    .contact {
+        padding: var(--espaciado-normal) calc(var(--espaciado-pequeno) / 2); /* Reduce padding horizontal en contacto móvil pequeño */
+    }
+
+    .contact h2 {
+        font-size: 1.7rem; /* Reduce tamaño de título de contacto en móvil pequeño */
+    }
+
+    .contact-info {
+        padding: var(--espaciado-pequeno); /* Reduce padding en info de contacto en móvil pequeño */
+    }
+
+
+    /* GALERIA DE IMAGENES (Dentro de Hero Enfermedades) */
+    .image-container {
+        flex: 1 1 100%; /* Una imagen por fila en móvil pequeño */
+    }
+}
