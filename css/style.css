@@ -515,6 +515,66 @@ ul {
     margin-bottom: var(--espaciado-pequeno);
 }
 
+/* Estilos para la sección de testimonios */
+/* Estilos base para la sección de testimonios */
+.testimonios {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.testimonio-video {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.testimonio-texto {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .testimonios {
+        padding: 1.5rem;
+    }
+
+    .testimonio-video {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .testimonio-texto {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonios {
+        padding: 1rem;
+    }
+
+    .testimonio-video {
+        border-radius: 6px;
+    }
+
+    .testimonio-texto {
+        font-size: 0.9rem;
+    }
+}
+
 .video-container {
     position: relative;
     width: 100%;

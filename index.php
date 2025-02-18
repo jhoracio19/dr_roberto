@@ -62,6 +62,22 @@ incluirTemplate('header', true);
         </div>
     </section>
 
+    <!-- Testimonios -->
+    
+        <!-- Testimonios -->
+        <section id="testimonios" class="testimonios">
+        <h2>Testimonios de Nuestros Pacientes</h2>
+        <div class="testimonio-video">
+            <video controls width="100%" poster="src/img/poster-video.jpg">
+                <source src="src/cirugias/testimonio.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+        <div class="testimonio-texto">
+            <p>Escucha directamente de nuestros pacientes cómo hemos impactado positivamente en su salud y bienestar. Aquí, [Nombre de la paciente] comparte su experiencia con nuestros servicios.</p>
+        </div>
+    </section>
+
     <!-- Ubicacion y contacto -->
     <section class="contact">
         <h2>Ubicación y Contacto</h2>
