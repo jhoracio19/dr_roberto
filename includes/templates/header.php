@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +7,31 @@
     
     <!-- SEO -->
     <meta name="description" content="Especialista en otorrinolaringología en Tlaxcala. Cuidamos tu salud auditiva, nasal y de garganta con atención profesional y personalizada.">
-    <meta name="keywords" content="otorrinolaringólogo, salud auditiva, nariz, garganta, médico especialista, Tlaxcala">
+    <meta name="keywords" content="otorrinolaringólogo, salud auditiva, nariz, garganta, médico especialista, Tlaxcala, Otorrino, doctor en Tlaxcala">
     <meta name="author" content="Dr. Roberto Oscar Herrera Mendoza">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Dr. Roberto Oscar Herrera Mendoza - Otorrinolaringólogo">
     <meta property="og:description" content="Especialista en salud auditiva, nasal y de garganta en Tlaxcala. Atención profesional y personalizada.">
-    <meta property="og:image" content="https://jhoracio19.pro/src/img/dr_roberto.jpg">
-    <meta property="og:url" content="https://jhoracio19.pro">
+    <meta property="og:image" content="https://otorrinotlaxcala.com/src/img/dr_roberto.jpg">
+    <meta property="og:url" content="https://otorrinotlaxcala.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dr. Roberto Oscar Herrera Mendoza - Otorrinolaringólogo">
     <meta name="twitter:description" content="Especialista en salud auditiva, nasal y de garganta en Tlaxcala. Atención profesional y personalizada.">
-    <meta name="twitter:image" content="https://jhoracio19.pro/src/img/dr_roberto.jpg">
+    <meta name="twitter:image" content="https://otorrinotlaxcala.com/src/img/dr_roberto.jpg">
 
 
 
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="canonical" href="https://jhoracio19.pro">
+    <link rel="canonical" href="https://otorrinotlaxcala.com/">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="src/img/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/img/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/img/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../src/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../src/img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../src/img/logo.png">
 
     <!-- Preloads -->
     <link rel="stylesheet" href="../../css/normalize.css">
@@ -44,6 +44,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+        <!-- Datos Estructurados (Schema.org) -->
+        <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Roberto Oscar Herrera Mendoza",
+        "medicalSpecialty": "Otolaryngology",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tlaxcala, México"
+        },
+        "image": "https://otorrinotlaxcala.com/src/img/dr_roberto.jpg",
+        "telephone": "+522461567821",
+        "url": "https://otorrinotlaxcala.com/"
+    }
+    </script>
 </head>
 
 <body>
