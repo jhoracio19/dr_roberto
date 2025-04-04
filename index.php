@@ -76,6 +76,10 @@ incluirTemplate('header', true);
         <div class="testimonio-texto">
             <p>Escucha directamente de nuestros pacientes cómo hemos impactado positivamente en su salud y bienestar. Aquí, Paola comparte su experiencia con nuestros servicios.</p>
         </div>
+
+        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+        <div class="elfsight-app-7cf088b5-c22a-4d92-9184-088e3e596af7" data-elfsight-app-lazy></div>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
     </section>
 
     <!-- Ubicacion y contacto -->
@@ -94,6 +98,10 @@ incluirTemplate('header', true);
     </section>
 
 
+
+
+
 <?php 
     incluirTemplate('footer');
+
 ?> 
