@@ -1,4 +1,5 @@
 <?php
+$canonical = 'https://otorrinotlaxcala.com/estetico.php';
 require 'includes/app.php';
 incluirTemplate('header', $inicio = true);
 ?>
