@@ -71,7 +71,7 @@ incluirTemplate('header', true);
         <section id="testimonios" class="testimonios">
         <h2>Testimonios de Nuestros Pacientes</h2>
         <div class="testimonio-video">
-            <video controls width="100%" poster="src/img/poster-video.jpg">
+            <video controls width="100%" poster="src/img/poster-video.png">
                 <source src="src/cirugias/testimonio.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de videos.
             </video>
