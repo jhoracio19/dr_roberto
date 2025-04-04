@@ -1,4 +1,6 @@
 <?php
+$pageTitle = 'Otorrinolaringólogo en Tlaxcala | Dr. Roberto Herrera';
+$metaDescription = 'Consulta al Dr. Roberto Herrera, otorrinolaringólogo en Tlaxcala. Tratamientos especializados para oído, nariz y garganta. Agenda tu cita hoy.';
 require 'includes/app.php';
 incluirTemplate('header', true);
 ?>
@@ -19,7 +21,7 @@ incluirTemplate('header', true);
     <!-- Servicios -->
 
     <section id="servicios" class="servicios">
-        <h2>Servicios Médico</h2>
+        <h2>Servicios Médicos</h2>
         <div class="services-container">
             <div class="service-card">
                 <img class="service-icon" src="src/img/oido.png" alt="Diagnóstico Auditivo">
@@ -46,7 +48,7 @@ incluirTemplate('header', true);
         <h2>Acerca del Doctor</h2>
         <div class="about-content">
             <div class="about-image">
-                <img loading="lazy" src="src/img/dr_roberto.jpg" alt="Doctor">
+                <img loading="lazy" src="src/img/dr_roberto.jpg" alt="Dr. Roberto Herrera, especialista en otorrinolaringología en Tlaxcala">
             </div>
             <div class="about-text">
                 <h3>Dr. Roberto Herrera</h3>

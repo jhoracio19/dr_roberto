@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza, Otorrinolaringólogo</title>
+    <title><?php echo $pageTitle ?? 'Otorrinolaringólogo en Tlaxcala | Dr. Roberto Herrera' ?></title>
+
 
     
     <!-- SEO -->
-    <meta name="description" content="Otorrinolaringólogo en Tlaxcala. El Dr. Roberto Oscar Herrera es especialista en oído, nariz y garganta. Atención profesional y citas disponibles.">
+    <meta name="description" content="<?php echo $metaDescription ?? 'Otorrinolaringólogo en Tlaxcala. El Dr. Roberto Oscar Herrera es especialista en oído, nariz y garganta. Atención profesional y citas disponibles.' ?>">
 
-    <meta name="keywords" content="Otorrino Tlaxcala, Otorrinolaringólogo Tlaxcala, doctor oído nariz garganta Tlaxcala, especialista oído nariz garganta">
 
     <meta name="author" content="Dr. Roberto Oscar Herrera Mendoza">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza">
-    <meta property="og:description" content="Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita.">
+    <meta property="og:title" content="<?php echo $pageTitle ?? 'Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza'; ?>">
+    <meta property="og:description" content="<?php echo $metaDescription ?? 'Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita.'; ?>">
+
     <meta property="og:image" content="https://otorrinotlaxcala.com/src/img/dr_roberto.jpg">
     <meta property="og:url" content="https://otorrinotlaxcala.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza">
-<meta name="twitter:description" content="Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita hoy.">
+    <meta name="twitter:title" content="<?php echo $pageTitle ?? 'Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza'; ?>">
+    <meta name="twitter:description" content="<?php echo $metaDescription ?? 'Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita hoy.'; ?>">
+
 
     <meta name="twitter:image" content="https://otorrinotlaxcala.com/src/img/dr_roberto.jpg">
 
@@ -58,10 +59,10 @@
     "medicalSpecialty": "Otolaryngology",
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Aquí pon la dirección exacta",
+        "streetAddress": "G. Valle 18, Centro",
         "addressLocality": "Tlaxcala",
         "addressRegion": "Tlaxcala",
-        "postalCode": "Aquí pon el código postal",
+        "postalCode": "90000",
         "addressCountry": "MX"
     },
     "image": "https://otorrinotlaxcala.com/src/img/dr_roberto.jpg",
