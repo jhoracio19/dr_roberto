@@ -85,7 +85,7 @@
 
         <nav class="header-menu">
             <ul class="header-menu_link">
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="/">Inicio</a></li>
                 <li><a href="pacientes.php">Pacientes</a></li>
             </ul>
         </nav> <!-- .header-menu -->
