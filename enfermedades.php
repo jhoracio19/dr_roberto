@@ -1,6 +1,7 @@
 <?php
 $pageTitle = 'Enfermedades Otorrinolaringológicas | Dr. Roberto Herrera';
 $metaDescription = 'Descubre las enfermedades más comunes del oído, nariz, garganta, laringe y cuello. Información clara y confiable del Dr. Roberto Herrera, otorrino en Tlaxcala.';
+$canonical = 'https://otorrinotlaxcala.com/enfermedades.php';
 
 require 'includes/app.php';
 incluirTemplate('header', $inicio = true);

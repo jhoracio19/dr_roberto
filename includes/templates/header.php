@@ -31,7 +31,8 @@
 
 
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <link rel="canonical" href="https://otorrinotlaxcala.com/">
+    <link rel="canonical" href="<?php echo $canonical ?? 'https://otorrinotlaxcala.com/'; ?>">
+
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../src/img/logo.png">
