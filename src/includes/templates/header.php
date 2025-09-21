@@ -8,21 +8,21 @@
 
     
     <!-- SEO -->
-    <meta name="description" content="<?php echo $metaDescription ?? 'Otorrinolaringólogo en Tlaxcala. El Dr. Roberto Oscar Herrera es especialista en oído, nariz y garganta. Atención profesional y citas disponibles.' ?>">
+    <meta name="description" content="Otorrinolaringólogo en Tlaxcala. El Dr. Roberto Oscar Herrera es especialista en oído, nariz y garganta. Atención profesional y citas disponibles.">
 
 
     <meta name="author" content="Dr. Roberto Oscar Herrera Mendoza">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<?php echo $pageTitle ?? 'Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza'; ?>">
-    <meta property="og:description" content="<?php echo $metaDescription ?? 'Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita.'; ?>">
+    <meta property="Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza">
+    <meta property="Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita.">
 
     <meta property="og:image" content="https://otorrinotlaxcala.com/src/img/dr_roberto.jpg">
     <meta property="og:url" content="https://otorrinotlaxcala.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:title" content="<?php echo $pageTitle ?? 'Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza'; ?>">
+    <meta name=Otorrino en Tlaxcala | Dr. Roberto Oscar Herrera Mendoza'; ?>">
     <meta name="twitter:description" content="<?php echo $metaDescription ?? 'Especialista en oído, nariz y garganta en Tlaxcala. Agenda tu cita hoy.'; ?>">
 
 
